@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        sorozat {
+                word-spacing: 12px;
+                font-weight: bold;
+                font-size: 16px;
+        }
+
+        img.ujra {
+            height : 24px;
+            opacity : .7;
+            float : right;
+	    }
+     </style>
+</head>
+<body>
+    <h2>Matematika a JavaScipt segítségével</h2>
+    <hr>
+    <p style="font-size: 120%;">
+        Tottó tipp generálása véletlenszám generátorral:<br>
+        <a href='javascript:void(0)' onclick='general()'><img src='refresh.png' class='ujra' title='Frissít'></a>
+        <sorozat id=tipp></sorozat>
+</p>
+    <hr>
+    <script>
+        function general() {
+            tipp.innerHTML = '';
+            for (i=1; i<=14; i++) {
+                rd = Math.floor(Math.random()*3+1);
+                if (rd==3) {
+                    rd='X';
+                }
+                s=i;
+                c='blue';
+                if (i==14) {
+                    c='red';
+                }
+                tipp.innerHTML+= '<toto style="color:'+c+'">'+rd+'</toto> '
+            }
+        }
+
+        general();
+    </script>
+</body>
+</html>

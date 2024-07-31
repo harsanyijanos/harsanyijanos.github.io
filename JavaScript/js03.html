@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1 id="cim1">
+        Helló Világ!
+    </h1>
+    <script>
+        var hElement = document.getElementById('cim1');
+        console.log(hElement.innerHTML);
+        var newHText = prompt("Adj egy új címsor szöveget!");
+        hElement.innerHTML = newHText;
+    </script>
+</body>
+</html>

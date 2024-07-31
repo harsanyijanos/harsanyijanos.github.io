@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html>
+  <body>
+   <p id="szoveg"> </p>
+
+   <button onclick="elso()">Első elem (0. index)</button>
+   <button onclick="masodik()">Második elem (1. index)</button>
+   <button onclick="harmadik()">Harmadik elem (2. index)</button>
+
+   <script>
+      var nyelvek = ["HTML", "CSS", "JS"]; 
+
+      function elso() {
+         document.getElementById("szoveg").innerHTML = nyelvek[0];
+      }
+
+      function masodik() {
+         document.getElementById("szoveg").innerHTML = nyelvek[1];
+      }
+
+      function harmadik() {
+         document.getElementById("szoveg").innerHTML = nyelvek[2];
+      }
+  </script>
+
+ </body>
+</html>

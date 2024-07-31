@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1>
+        Matematika gyakorlása
+    </h1>
+    <p>
+        5000 véletlenszámot generálunk 0 és 1 között, majd kiszámítjuk 
+        a számok átlagát!
+    </p>
+    <hr>
+
+    <script LANGUAGE="JavaScript" type="text/JavaScript">
+        var osszeg = 0;
+        for (var i=1; i<5000; i++) {
+            var velSzam = Math.random();
+            osszeg += velSzam;
+            console.log(' '+i+'  '+velSzam);
+        }
+        atlag = osszeg/5000;
+        // Kerekités 3 tizedesre
+        atlag = Math.round(atlag*1000)/1000;
+        document.write("<h2>Az 5000 véletlenszám átlaga: "+atlag+"</h2>");
+    </script>
+</body>
+</html>

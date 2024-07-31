@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        kor {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+<body>
+    <p id=futofeny>        
+    </p>
+    <script>
+        function frissites() {
+            str ='';
+            for (i=1; i<=20; i++) {
+                szin = 'red';
+                if (i==startPos) {
+                    szin = 'whith';
+                }
+                str +='<kor style="background-color: ' + szin +
+                    ';"></kor>'
+            }
+            futofeny.innerHTML = str;
+            if (++startPos>20) {
+                startPos=1;
+            }
+        }
+
+        startPos = 10;
+        setInterval('frissites()',200);
+        frissites();
+
+    </script>
+</body>
+</html>
