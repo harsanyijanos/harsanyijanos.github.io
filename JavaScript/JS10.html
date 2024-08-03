@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #orakeret {
+            width: 612px; 
+            margin: 0 auto;
+            border: 4px solid #806010;
+            border-radius: 36px;
+            background-color: #F0E0C0;
+            box-shadow: 8px 8px 8px #A09050;
+            text-align: center;
+        }
+
+        #kijelzo1 {
+            padding: 24px;
+            font-size: 96px;
+            color: #806010;
+
+        }
+
+        #kijelzo2 {
+            padding-bottom: 24px;
+            font-size: 36px;
+            color: #A09050;
+        }
+    </style>
+</head>
+<body>
+    <h2>Óra megvalósítása JavaScript segítségével</h2>
+    <hr>
+    <div id="orakeret">
+        <div id="kijelzo1"></div>
+        <div id="kijelzo2"></div>
+    </div>
+    <br>
+    <hr>
+</body>
+<script>
+
+    napok = ["Hétfő", "Kedd", "Szerda", "Csütörtök",
+        "Péntek", "Szombat", "Vasárnap"];
+
+    function frissites() {
+        most = new Date();
+
+        ev = most.getFullYear();
+        ho = most.getMonth();
+        nap= most.getDate();
+        napNev = most.getDay();
+
+        ora = most.getHours();
+        perc = most.getMinutes();
+        sec = most.getSeconds();
+
+        if (ho<10) ho = "0"+ho;
+        if (nap<10) nap = "0"+nap;
+        if (ora<10) ora = "0"+ora;
+        if (perc<10) perc = "0"+perc;
+        if (sec<10) sec = "0"+sec;
+
+        kijelzo1.innerHTML = "" + ora + ":" + perc + ":" +sec
+        kijelzo2.innerHTML = "" + ev +"." + ho +"." + nap +
+            "<br>" + napok[napNev] 
+    }
+
+    setInterval('frissites()',1000);
+    frissites();
+</script>
+</html>

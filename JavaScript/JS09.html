@@ -7,16 +7,23 @@
     <style>
         kor {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             border: solid 1px red;
         }
     </style>
 </head>
 <body>
-    <p id=futofeny>        
+    <h2>Időzített feladatok megoldása JavaScript-tel</h2>
+    <p style="font-size: 110%;">
+        Egyszerű futófény készítése
     </p>
+    <hr>
+    <p style="margin: 10px auto; text-align: center;" id=futofeny>        
+    </p>
+    <hr>
+ 
     <script>
         function frissites() {
             str ='';
@@ -26,7 +33,7 @@
                     szin = 'whith';
                 }
                 str +='<kor style="background-color: ' + szin +
-                    ';"></kor>'
+                    ';"></kor>';
             }
             futofeny.innerHTML = str;
             if (++startPos>20) {
