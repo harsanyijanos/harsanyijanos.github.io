@@ -2,7 +2,7 @@
 1. HTML
 2. JavaScript
 3. Python
-##tároló címe
+## Tároló címe
 ```
 https://github.com/harsanyijanos/harsanyijanos.github.io
 ```
