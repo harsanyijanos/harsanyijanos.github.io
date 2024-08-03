@@ -7,6 +7,7 @@
         "markdown",
         "latex",
         "plaintext",
-        "html"
+        "html",
+        "python"
     ]
 }
