@@ -1,7 +1,7 @@
 """
 Egyszerű számítási feladat
 Meghatározza a négyzet oldala alapján
-a négyzet kerületét
+a négyzet kerületét, területét
 Feladat: Vali
 """
 

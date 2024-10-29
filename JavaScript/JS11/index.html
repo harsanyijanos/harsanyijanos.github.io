@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képcserélő</title>
+    <style>
+        #kepcsere img {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="kepek">
+        <p><img id="kepcsere" src="./img/1.png"></p>
+        <button type="button" onclick="kepcsereles()">Következő kép</button>
+    </div>
+</body>
+<script>
+    kepek = ["./img/1.png", "./img/2.png", "./img/3.png"]
+    sorszam = 1
+    function kepcsereles()
+    {
+        item = document.getElementById("kepcsere").src=kepek[sorszam]
+        sorszam += 1
+        if (sorszam == kepek.length)
+            {
+                sorszam = 0
+            }
+    }
+</script>
+</html>
