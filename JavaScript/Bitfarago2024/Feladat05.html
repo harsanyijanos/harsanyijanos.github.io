@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit statisztika</title>
+    <style>
+        * {
+            color: #330000;
+            border-radius: 5px;
+            margin: 2px;
+            padding: 2px 5px;
+            font-size: 15px;
+
+        }
+
+        form {
+            width: 650px;
+            margin: auto;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+
+ 
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Bit statisztika: </legend>
+            <table>
+                <tr>
+                    <td class="cimke" width="50%"><label for="m1">Bináris szöveg:</label></td>
+                    <td><input type="input" id="m1" size="30"></td>
+                </tr>
+                
+                <tr>
+                    <td class="cimke"><label for="m2">1-es karakterek összes száma: </label></td>
+                    <td><input type="input" id="m2" size="7" disabled></td>
+                </tr>
+
+                <tr>
+                    <td class="cimke"><label for="m3">0-ás karakterek összes száma: </label></td>
+                    <td><input type="input" id="m3" size="7" disabled></td>
+                </tr>
+                <tr>
+                    <td class="cimke"><label for="m4">Leghosszabb 1-es sorozat: </label></td>
+                    <td><input type="input" id="m4" size="7" disabled></td>
+                </tr>
+                <tr>
+                    <td class="cimke"><label for="m5">Leghosszabb 0-ás sorozat: </label></td>
+                    <td><input type="input" id="m5" size="7" disabled></td>
+                </tr>
+                <tr>
+                    <td class="cimke"><label for="m6">Leghosszabb váltakozó sorozat: </label></td>
+                    <td><input type="input" id="m6" size="7" disabled></td>
+                </tr>
+                <tr>
+                    <td class="cimke"><label for="m7">Leghosszabb részsorozat: </label></td>
+                    <td><input type="input" id="m7" size="7" disabled></td>
+                </tr>
+            </table>
+      
+
+        </fieldset>
+        <div style="margin-top: 5px;">
+            <input type="button" onclick="kiertekel()" value="Kiértékelés">
+            <input type="button" onclick="randNumber()" value="Véletlenszámok">
+            <input type="reset">
+        </div>
+        
+    </form>
+    
+
+
+    <script>
+
+        function isBit(szoveg){
+            for (i=0; i<szoveg.length; i++){
+                if (szoveg.charAt(i)!='0' && szoveg.charAt(i)!='1') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function sumZero(szoveg) {
+            sum=0;
+            for (i=0; i<szoveg.length; i++){
+                if (szoveg.charAt(i)=='0') {
+                    sum++;
+                }
+            }
+            return sum;
+
+        }
+
+        function sumOne(szoveg) {
+            return szoveg.length-sumZero(szoveg);
+        }
+
+        function maxSerialOne (szoveg) {
+            max = 0;
+            sum = 0;
+            for (i=0; i<szoveg.length; i++){
+                if(szoveg.charAt(i)=='1') {
+                    sum++;
+                } else {
+                    if (sum>max){
+                        max=sum;
+                    }
+                    sum=0;
+                }
+                if (i==szoveg.length-1){
+                    if (sum>max){
+                        max=sum;
+                    } 
+                }
+            }
+            return max;   
+        }
+
+        function maxSerialZero (szoveg) {
+            max = 0;
+            sum = 0;
+            for (i=0; i<szoveg.length; i++){
+                if(szoveg.charAt(i)=='0') {
+                    sum++;
+                } else {
+                    if (sum>max){
+                        max=sum;
+                    }
+                    sum=0;
+                }
+                if (i==szoveg.length-1){
+                    if (sum>max){
+                        max=sum;
+                    } 
+                }
+            }
+            return max;   
+        }
+
+        function maxSerial(szoveg) {
+
+            max = 0;
+            sum = 0;
+            for (i=0; i<szoveg.length-1; i++){
+                if(szoveg.charAt(i)!=szoveg.charAt(i+1)){
+                    sum++;
+                    if (i==szoveg.length-2){
+                        if (sum>max){
+                            max=sum;
+                        } 
+                    }
+                } else {
+                    if (sum>max){
+                    max=sum;
+                    }
+                    sum = 0;
+                }
+            }
+            return max;
+        }
+
+        function maxRepeat(szoveg) {
+            max = 0;
+            for (i=0; i<szoveg.length-1; i++){
+                sum =0;
+                for (j=i+1; j<szoveg.length; j++){
+                    if (szoveg.charAt(i)==szoveg.charAt(j)){
+                        sum++;
+                    } else {
+                        break;
+                    }
+                }
+                if (sum>max){
+                    max=sum;
+                }
+
+            }
+            return max;
+        }
+
+
+        function kiertekel(){
+            
+            sz = document.getElementById('m1').value;
+            if (sz==''){
+                alert('Még nem adtál meg szöveget!');
+                return;
+            }
+            if (isBit(sz)){
+                document.getElementById('m2').value = sumOne(sz);
+                document.getElementById('m3').value = sumZero(sz);
+                document.getElementById('m4').value = maxSerialOne(sz);
+                document.getElementById('m5').value = maxSerialZero(sz);
+                m = maxSerial(sz);
+                if (m==0){
+                    document.getElementById('m6').value = m ;
+                } else {
+                    document.getElementById('m6').value = m+1;
+                }
+                document.getElementById('m7').value = maxRepeat(sz);
+                
+            } else {
+                alert('O és 1-től eltérő karakter van a megadott szövegben!');
+            }
+ 
+        }
+
+        function randNumber() {
+            strNum = prompt('Hány karakterből álló véletlenszámot szeretnél?', '5');
+            if (!isNaN(strNum)){
+                v = parseInt(strNum);
+                alert(v);
+                rNum = '';
+                if (v>0) {
+                    for (i=0; i<v; i++) {
+                        rNum += Math.floor(Math.random()*2);
+                    }
+                    alert(rNum);
+                    document.getElementById('m1').value = rNum;  
+                }
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

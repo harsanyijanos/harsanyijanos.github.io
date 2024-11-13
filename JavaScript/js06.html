@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 6.</title>
+</head>
+<body>
+    <button onclick="adatInput()">Adatok bekérése</button>
+    <button onclick="osszeg()">Összeg</button>
+    <button onclick="kivonas()">Különbség</button>
+    <button onclick="szorzas()">Szorzat</button>
+
+    <script>
+        szam1 = null;
+        szam2 = null;
+
+        function adatInput(){
+            szam1 = parseInt(prompt('Add meg az első számot!', 0));
+            szam2 = parseInt(prompt('Add meg az második számot!', 0));
+        }
+
+        function osszeg(){
+            var sum = szam1 + szam2;
+            alert('A két szám összege: '+sum);
+        }
+
+        function kivonas(){
+            var kiv = szam1 - szam2;
+            alert('A két szám különbsége: '+ kiv);
+        }
+
+        function szorzas(){
+            var szor = szam1 * szam2;
+            alert('A két szám különbsége: '+ szor);
+        }
+
+    </script>
+    
+</body>
+</html>

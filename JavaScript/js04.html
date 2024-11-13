@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 04.</title>
+</head>
+<body>
+   <button onclick="start()">Start</button>
+   <script>
+    var nev = null;
+
+    function start(){
+        nev = prompt('Add meg a neved!', 'Big Brother');
+        document.write('<h1>Helló ' + nev + '!</h1>');
+        document.write('<button onclick="stop()">Stop</button>');
+    }
+
+    function stop(){
+        if (window.confirm("Biztos?")== true){
+                window.close()
+            }
+    }
+   </script>
+</body>
+</html>

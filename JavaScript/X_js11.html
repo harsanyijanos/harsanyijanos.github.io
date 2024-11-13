@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <style>
+        hr {
+            width: 80%;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
+            text-align: justify;
+        }
+
+        .osztaly {
+            font-weight: bold;
+ 
+        }
+
+        div {
+            width: 80%;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <hr>
+    <h1 id="cim" class="osztaly">Cím</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, alias, at voluptatibus quibusdam eveniet ea mollitia veniam assumenda blanditiis velit accusantium obcaecati earum tempore! Distinctio dignissimos cum repellat excepturi odit?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas minima esse ducimus aperiam molestias ullam, inventore fugit maiores quibusdam natus dolores. Dolorum accusantium odio eum debitis, a nulla ducimus autem.</p>
+    <p class="osztaly">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, distinctio cupiditate suscipit aperiam exercitationem ea porro fugiat quaerat ab fugit placeat, quae non enim quisquam voluptatem eum atque earum recusandae!</p>
+    <hr>
+    <div>
+        <button id="gomb1" onclick="gomb1Do()">Módosítás ID alapján</button>
+        <button id="gomb2" onclick="gomb2Do()">Módosítás Name alapján</button>
+        <button id="gomb3" onclick="gomb3Do()">Módosítás Class alapján</button>
+    </div>
+    <hr>
+
+    <script>
+
+        function gomb1Do() {
+            var elem = document.getElementById("cim");
+            elem.style.color = "blue";
+        }
+
+        function gomb2Do() {
+            var elemek = document.getElementsByTagName("p");
+            for(i=0; i<elemek.length; i++){
+                elemek[i].style.color = "red";
+                elemek[i].style.fontWeight = 'bold';
+            }
+        }
+
+        function gomb3Do() {
+            var elemek = document.getElementsByClassName("osztaly");
+            for(i=0; i<elemek.length; i++){
+                elemek[i].style.color = "green";
+                elemek[i].style.fontStyle = "italic"; 
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
