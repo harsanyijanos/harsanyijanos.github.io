@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JS07</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+    </style>
+ 
+</head>
+<body>
+<h1 id="cim">Cim1</h1>
+<hr>
+<button onclick="cimCsere()">Cseréld a cím szövegét</button>
+<button onclick="szinCsere()">Cseréld a cím színét</button>
+<button onclick="igazit()">Igazítsd középre</button>
+
+ <script>
+    cim = document.getElementById("cim");
+
+    function cimCsere() {
+        ujCim = window.prompt("Új cím:");
+        cim.innerHTML = ujCim;
+    }
+
+    function szinCsere() {
+        cim.style.color = window.prompt("Új szín:");
+    }
+
+    function igazit() {
+        cim.style.textAlign = "center";
+    }
+
+ </script>  
+</body>
+</html>

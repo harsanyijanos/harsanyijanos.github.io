@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS08</title>
+    <style>
+        body {
+            color: navy;
+            background-color: azure;
+        }
+
+        .urlap {
+            width: 400px;
+            margin: auto;
+        }
+
+        hr {
+            width: 97%;
+            margin: auto;
+            color: rgb(220, 220, 220);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="urlap">
+        <form id="urlap">
+            <fieldset>
+                <legend>Eredő ellenállás számítása: </legend>
+                <p>
+                    <label>
+                        Kapcsolás: 
+                        <input type="radio" name="kapcsolas" value="soros" checked>Soros
+                        <input type="radio" name="kapcsolas" value="parhuzamos"> Párhuzamos
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        R<sub>1</sub> = 
+                        <input type="number" name="r1" min="0">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        R<sub>2</sub> = 
+                        <input type="number" name="r2" min="0">
+                    </label>
+                </p>
+                <hr>
+                <p>
+                    <label>
+                        R<sub>e</sub> = 
+                        <input type="text" name="re" disabled>
+                    </label>
+                </p>
+                <input type="button" value=" Számol " onclick="szamol()">
+                <input type="reset" value="  Töröl  ">
+            </fieldset>
+        </form>
+    </div>
+</body>
+<script>
+    urlap["r1"].value = 'OK!'
+
+    function szamol() {
+        var r1 = parseFloat(urlap["r1"].value);
+        var r2 = parseFloat(urlap["r2"].value);
+
+        if (isNaN(r1+r2)) {
+            alert("Megadott számok valamelyike hibás!")
+            return
+        }
+
+        if (urlap["kapcsolas"].value=="soros"){
+            urlap["re"].value = (r1 + r2);
+        } else {
+            urlap["re"].value = r1 * r2 / (r1 + r2);
+        }
+        
+    }
+
+
+
+
+
+
+</script>
+</html>

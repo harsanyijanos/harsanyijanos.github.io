@@ -1,4 +1,4 @@
-## A programozástantárgyakkal kapcsolatos programok
+## A programozás tantárgyakkal kapcsolatos programok
 1. HTML
 2. JavaScript
 3. Python

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="text"] {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 600px; margin: auto; background-color: rgb(210, 210, 210);">
+        <form name="form1" id="myForm">
+            <h1 style=" text-align: center; color: navy;">Számoljunk</h1>
+            <fieldset name="keret" style="margin: auto 5px;">
+                <div>
+                    <input type="radio" name="muvelet" checked onchange="mCsere()">összeadás 
+                    <input type="radio" name="muvelet" onchange="mCsere()">kivonás
+                    <input type="radio" name="muvelet" onchange="mCsere()">szorzás 
+                    <input type="radio" name="muvelet" onchange="mCsere()">osztás
+                </div>
+                <br>
+                <div>
+                    <input type="text" name="szam1">
+                    <span id="mJel"> + </span>
+                    <input type="text" name="szam2">
+                    =
+                    <input type="text" name="erdemeny">
+                </div>
+
+            </fieldset>
+            <input type="button" name="pgomb" onclick="szamol()" value="Számol" style="margin: 10px 10px;">
+            <input type="reset">
+        </form>
+    </div>
+
+    <script>
+
+        const rg = myForm["muvelet"];
+        const mj = document.getElementById("mJel");
+
+        muv = 0;
+
+        function mCsere() {
+
+            for (i=0; i<rg.length; i++) {
+                if (rg[i].checked) {
+                    break;
+                }
+            }
+
+            switch(i) {
+                case 0:
+                    sz= " + ";
+                    break;
+                case 1:
+                    sz= " - ";
+                    break; 
+                case 2:
+                    sz= " * ";
+                    break;
+                case 3:
+                    sz= " / ";
+                    break;   
+            }
+
+            mj.innerText = sz;
+            
+            muv = i;
+
+            myForm["erdemeny"].value = "";
+        }
+
+
+
+
+        function szamol( ) {
+
+           sz1 = parseFloat(myForm["szam1"].value);
+           sz2 = parseFloat(myForm["szam2"].value) ;
+
+
+           switch(muv) {
+                case 0:
+                    sz3= sz1+sz2;
+                    break;
+                case 1:
+                    sz3= sz1-sz2;
+                    break; 
+                case 2:
+                    sz3= sz1*sz2;
+                    break;
+                case 3:
+                    sz3= sz1/sz2;
+                    break;   
+            }
+
+            myForm["erdemeny"].value = sz3;
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

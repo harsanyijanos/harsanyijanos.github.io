@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>JS10</title>
+    <style>
+        body {
+            background-color: darkorange;
+            color: darkred;
+        }
+
+        #urlap {
+            width: 500px;
+            margin:20px auto;
+        }
+
+        fieldset {
+            border-color: darkred;
+            border-radius: 5px;
+        }
+
+        input[type='radio'] {
+            accent-color: darkred;
+            
+        }
+
+        input[type="button"] {
+            color: darkred;
+            border: 2px solid darkred;
+            background-color: darkorange;
+        }
+
+        input[type="button"]:active {
+            color: darkorange;
+            border: 2px solid darkorange;
+            background-color: darkred;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <form id="urlap">
+            <fieldset>
+                <legend>Dátum használata:</legend>
+                <p>
+                    <input type="radio" name="dat" value="nap" checked onchange="radio()">Nap
+                    <input type="radio" name="dat" value="ora" onchange="radio()">Óra
+                    <input type="radio" name="dat" value="perc" onchange="radio()">Perc
+                </p>
+                <fieldset>
+                    <legend>Születési dátum:</legend>
+                    <p>
+                        <label>Év:</label>
+                        <input type="number" id="ev" name="ev" value="2000">
+                    </p>
+                    <p>
+                        <label>Hó:</label>
+                        <input type="number" id="ho" name="ho" value="1">
+                    </p>
+                    <p>
+                        <label>Nap:</label>
+                        <input type="number" id="nap" name="nap" value="1">
+                    </p>
+                </fieldset>
+                <p>
+                    <label>Születéstől eltelt idő:</label>
+                    <input type="text" id="ido" name="ido" >
+                    <span id="mert"> nap</span>
+                </p>
+                <input type="button" value="-- Számol --" onclick="szamol()">
+            </fieldset>
+        </form>
+    </div>
+    <script>
+
+        const rg = urlap["dat"];
+        const ido =urlap["ido"];
+
+        
+
+
+        function radio() {
+
+            
+            const mrt = document.getElementById("mert");
+
+            var mer ='';
+
+            switch (rg.value) {
+                case 'nap':
+                    mer = "nap";
+                    break;
+                case 'ora':
+                    mer = 'óra';
+                    break;
+                case 'perc':
+                    mer = 'perc'
+            }
+            mrt.innerHTML = mer;
+            ido.value = '';
+
+        }
+
+        function szamol() {
+
+
+            var szd = new Date(
+                parseInt(urlap["ev"].value),
+                parseInt(urlap["ho"].value)-1,
+                parseInt(urlap["nap"].value)
+            );
+
+            var md = new Date();
+
+            var kul = md - szd;
+
+            switch (rg.value) {
+                case 'perc':
+                    kul /= 60000;
+                    break;
+                case 'ora':
+                    kul /= 3600000;
+                    break;
+                case 'nap':
+                    kul /= 3600000;
+                    kul /= 24;
+            }
+
+            urlap["ido"].value = Math.round(kul);
+
+            
+        }
+    </script>
+</body>
+</html>

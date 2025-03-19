@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évszakok</title>
+    <style>
+        .divkep {
+            width: 320px;
+            margin: auto;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        h2, p {
+            text-align: center;
+            color: blue;
+        }
+
+        table, td {
+            border: 2px solid blue;
+            border-collapse: collapse;
+        }
+
+        button {
+            color: blue;
+            background-color: lightblue ;
+            border: 1px solid blue;
+            border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="divkep">
+        <table>
+            <tr>
+                <td><h2>Évszakok</h2></td>
+            </tr>
+            <tr>
+                <td><img src="img/evszakok.jpg" id="pic"></td>
+            </tr>
+            <tr>
+                <td><p id="txt">Évszakok</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="padding: 5px; text-align: center;">
+                        <button onclick="kepCsere()">  Kép csere  </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const kepek = ["img/spring.jpg", "img/summer.jpg", 
+        "img/autumn.jpg", "img/winter.jpg"];
+
+        const szovegek = ["Tavasz", "Nyár", "Ősz", "Tél"];
+
+        const kep = document.getElementById("pic");
+        const szoveg = document.getElementById("txt");
+
+        var idx = -1;
+
+        function kepCsere()  {
+
+            idx++;
+            if (idx == kepek.length) {
+                idx = 0;
+            }
+            //alert(kepek.length);
+            kep.src = kepek[idx];
+            szoveg.innerText = szovegek[idx];
+        } 
+    </script>
+</body>
+</html>

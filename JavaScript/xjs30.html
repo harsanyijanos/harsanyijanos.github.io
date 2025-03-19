@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="text"] {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 600px; margin: auto; background-color: rgb(210, 210, 210);">
+        <form name="f1" id="f1">
+            <h1 style=" text-align: center; color: navy;">Próba form</h1>
+            <fieldset name="keret" style="margin: auto 5px;">
+                <input type="radio" name="muvelet" checked>összeadás 
+                <input type="radio" name="muvelet">kivonás
+                <input type="radio" name="muvelet">szorzás 
+                <input type="radio" name="muvelet">osztás <br>
+                <input type="text" name="szam1">
+                +
+                <input type="text" name="szam2">
+                =
+                <input type="text" name="erdemeny">
+            </fieldset>
+            <input type="button" name="pgomb" onclick="szamol(this.form)" value="Számol" style="margin: 10px 10px;">
+        </form>
+    </div>
+
+    <script>
+
+
+        function szamol(sForm){
+            sz = '';
+
+            
+            for (i=0; i<sForm.length; i++) {
+                sz +=i+" "+ sForm[i].name +"\n";
+            }
+            alert(sz);
+            alert(sForm["muvelet"].checked);
+
+            sz2='';
+            for (const elem of sForm) {
+                sz2 +=' '+ elem.name +"/n";
+            }
+            alert(sz2);
+        }
+    </script>
+    
+</body>
+</html>
