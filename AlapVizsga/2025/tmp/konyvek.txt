@@ -1,0 +1,108 @@
+﻿Gyilkosság az Orient expresszen;krimi;3000
+Gyilkosság a paplakban;krimi;3100
+Poirot karácsonya;krimi;2800
+A Bertram Szálló;krimi;4000
+Halál a Níluson;krimi;2900
+Nemezis;krimi;3000
+Rejtély az Antillákon;krimi;2500
+Gyilkosság Mezopotámiában;krimi;2550
+A titokzatos stylesi eset;krimi;2600
+Harry Potter és a bölcsek köve;filmdráma;3000
+Harry Potter és a Titkok Kamrája;filmdráma;3000
+Harry Potter és az azkabani fogoly;filmdráma;3500
+Harry Potter és a Tűz Serlege;filmdráma;4000
+Harry Potter és a Főnix Rendje;filmdráma;4500
+Harry Potter és a Félvér Herceg;filmdráma;4500
+Harry Potter és a halál ereklyéi;filmdráma;5000
+A karácsonyi disznó;fantasy;3000
+Ickabog;mesekönyv;3000
+A kakukkfiú hívogatása;krimi;3500
+A ragyogás;horror;3500
+Carrie;horror;2500
+Az;horror;5000
+A zöld mérföld;thriller;3000
+A remény rabja;thriller;3500
+A halál játéka;thriller;3000
+A kupola;sci-fi;5000
+Az idegen;sci-fi;3500
+Revival;sci-fi;3000
+A sötét torony;fantasy;3500
+A talizmán;fantasy;4000
+A pisztolyhős;fantasy;2000
+Az elveszettek;thriller;4600
+A túra;thriller;3290
+Egy a lányok közül;thriller;5000
+A tengeri nővérek;thriller;5490
+A lélegzetvétel;fikció;4000
+Utolsó látott;fikció;4490
+A vietnámi menyasszony;kémthriller;5490
+A folyó;kémthriller;5490
+Operáció Saigon;kémthriller;5490
+A francia lány;kémthriller;5490
+A csendes ember;kémthriller;5990
+A múlt árnyéka;kémthriller;5990
+Az elátkozott ház;humoros regény;3990
+Az FBI különleges ügynöke;krimi;3490
+A tizennégykarátos gyémánt;kalandregény;4990
+A láthatatlan ember;humoros regény;3490
+A láthatatlan bűnös;krimi;3990
+Mackó, a detektív;gyerekregény;3490
+Kísértet-szálló;humoros regény;3990
+Piszkos Fred, a kapitány;kalandregény;4490
+Veszélyes játék;krimi;4490
+Sajnálom, én vagyok;dráma;3490
+Az utolsó Zsugorlovag;kalandregény;4490
+A dupla gyilkosság;krimi;4490
+Három muskétás a vérmezőn;kalandregény;4490
+Egy bolond század;humoros regény;4490
+Fiatalúr, ne legyen féltékeny!;gyerekregény;3490
+Az utolsó bohóc;dráma;3490
+Az idő rövid története;tudományos ismeretterjesztő;4242
+Az én rövid történetem;önéletrajz;3990
+A nagy terv;tudományos ismeretterjesztő;5942
+Fekete lyukak;tudományos ismeretterjesztő;3990
+A mindenség elmélete;tudományos ismeretterjesztő;5490
+George kozmikus kincsvadászata;gyerekregény;4750
+George és az Ősrobbanás;gyerekregény;4250
+Az idő még rövidebb története;tudományos ismeretterjesztő;2990
+A tér és az idő természete;tudományos ismeretterjesztő;14990
+A veszedelmes játszma;politikai thriller;4990
+A Jack Ryan-jelentés;politikai thriller;4990
+A CIA ügynök;politikai thriller;4990
+Minden lehetséges;technológiai thriller;5990
+A veszedelmes játszma;politikai thriller;4990
+A Rainbow Six;katonai thriller;5990
+A veszélyes játszma;politikai thrillep;4990
+A mindenható játékos;technológiai thriller;5990
+Ellenség a mélyben;katonai thriller;5490
+A kardiológus jegyzetei;politikai thriller;4990
+A vörös vihar;katonai thriller;7990
+A becsület ára;politikai thriller;4490
+Minden fegyver csöve;politikai thriller;4990
+A vörös nyúlvadászat;politikai thriller;4490
+Endstation Malma;regény;4490
+Privat: mejlkorrespondens;levelezés;4490
+Bränn alla mina brev;regény;4490
+A túlélők;regény;4490
+Az állomás;regény;4990
+Rómeó és Júlia;tragédia;3990
+Hamlet;tragédia;4490
+Macbeth;tragédia;3990
+Othello;tragédia;4490
+Lear király;tragédia;4490
+A velencei kalmár;vígjáték;3990
+Szentivánéji álom;vígjáték;3490
+Sok hűhó semmiért;vígjáték;3990
+Ahogy tetszik;vígjáték;4490
+Tévedések vígjátéka;vígjáték;3990
+A vihar;színmű;3990
+Sok vihar egy éjszakában;vígjáték;3490
+Antonius és Kleopátra;tragédia;4490
+Coriolanus;tragédia;3990
+Athéni Timon;tragédia;3490
+Troilus és Cressida;színmű;4490
+Szeget szeggel;színmű;4490
+Minden jó, ha vége jó;színmű;3990
+Pericles;színmű;4490
+Cymbelin;színmű;4490
+Téli rege;színmű;4490
