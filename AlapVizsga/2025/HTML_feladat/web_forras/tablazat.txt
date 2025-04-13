@@ -1,0 +1,38 @@
+                <table class="table-secondary table-sm table-hover">
+                    <thead>
+                     
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Júl. 28–29.</td>
+                            <td>Delta Aquaridák meteorraj</td>
+                            <td>Éjfél után, dél-keleti égbolt</td>
+                        </tr>
+                        <tr>
+                            <td>Aug. 12–13.</td>
+                            <td>Perseidák meteorraj</td>
+                            <td>Egész éjjel, csúcs éjfél után</td>
+                        </tr>
+                        <tr>
+                            <td>Aug. 12.</td>
+                            <td>Vénusz–Jupiter együttállás</td>
+                            <td>Napkelte előtt, keleti horizont</td>
+                        </tr>
+                        <tr>
+                            <td>Szept. 7.</td>
+                            <td>Teljes holdfogyatkozás („vérhold”)</td>
+                            <td>Késő este, egész országban látható</td>
+                        </tr>
+                        <tr>
+                            <td>Szept. vége</td>
+                            <td>Szaturnusz oppozícióban</td>
+                            <td>Egész éjjel, déli égbolt</td>
+                        </tr>
+                        <tr>
+                            <td>Nov. 17–18.</td>
+                            <td>Leonidák meteorraj</td>
+                            <td>Éjfél után, keleti égbolt</td>
+                        </tr>
+  
+                    </tbody>
+                </table>                
